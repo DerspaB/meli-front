@@ -1,0 +1,51 @@
+.itemContainer {
+  display: flex;
+  border-bottom: 0.1em solid #eeeeee;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.ubication {
+  flex-grow: 2;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 12px;
+  color: #999999;
+}
+.imageContainer {
+  height: 180px;
+  width: 180px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+
+.imageContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.info .info-title {
+  font-size: 18px;
+}
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.info-header .price {
+  font-size: 24px;
+}
+.info-header img {
+  max-height: 20px;
+}
