@@ -4,8 +4,10 @@ import "./styles.css";
 export const Navbar = () => {
   return (
     <div className="navbar">
-      <img src="./assets/Logo_ML.png" alt="logo" />
-      <InputSearch />
+      <div className="wrapper">
+        <img src="./assets/Logo_ML.png" alt="logo" />
+        <InputSearch />
+      </div>
     </div>
   );
 };

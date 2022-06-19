@@ -1,9 +1,16 @@
 .itemContainer {
   display: flex;
+  flex-direction: column;
   border-bottom: 0.1em solid #eeeeee;
   margin-bottom: 16px;
   cursor: pointer;
   font-family: sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+  .itemContainer {
+    flex-direction: row;
+  }
 }
 
 .ubication {

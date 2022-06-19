@@ -2,11 +2,17 @@
   top: 0;
   width: 100%;
   position: sticky;
-  display: flex;
-  gap: 20px;
   padding: 10px 0;
   background: #ffe600;
   height: 40px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1060px;
 }

@@ -1,4 +1,5 @@
 import { Card } from "./components/Card/Card";
+import { ItemDetail } from "./components/ItemDetail/ItemDetail";
 import { MainContainer } from "./components/MainContainer/MainContainer";
 import { PreviewItem } from "./components/PreviewItem/PreviewItem";
 import { Navbar } from "./pages/Navbar/Navbar";
@@ -8,8 +9,7 @@ function App() {
     <div>
       <Navbar />
       <MainContainer>
-        <Card>
-          <PreviewItem />
+        <Card padding="16px">
           <PreviewItem />
         </Card>
       </MainContainer>
