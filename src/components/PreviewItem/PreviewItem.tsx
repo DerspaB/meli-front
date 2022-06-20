@@ -1,25 +1,34 @@
-import "./styles.css";
+import React, { useEffect } from 'react'
+import { Card } from '../Card/Card'
+import { Item } from './screens/Item/Item'
+import { usePreviewItem } from './context/usePreviewItem';
+import { useSearchParams } from 'react-router-dom';
+import { PreviewItemsBusiness } from './actions/previewItemsBusiness';
+import { Loading } from '../Loading/Loading';
 
 export const PreviewItem = () => {
-  return (
-    <div className="itemContainer">
-      <div className="imageContainer">
-        <img
-          src="https://http2.mlstatic.com/D_NQ_NP_606189-MCO49963305245_052022-V.webp"
-          alt="item"
-        />
-      </div>
-      <div className="info">
-        <div className="info-header">
-          <span className="price">$ 1.980</span>
-          <img src="./assets/ic_shipping.png" alt="carro" />
-        </div>
 
-        <div className="info-title">
-          Apple Ipod Touch 5g 16gb Negro igual a Nuevo Completo Unico!
-        </div>
-      </div>
-      <div className="ubication">Capital Federal</div>
-    </div>
-  );
-};
+    const { getItems } = PreviewItemsBusiness()
+    const [params] = useSearchParams()
+    const { state: { items, loading } } = usePreviewItem()
+
+
+    useEffect(() => {
+        if (params.get('search')) {
+            getItems(params.get('search') || '')
+        }
+    }, [params])
+
+    return (
+        <Card padding='16px'>
+            {
+                loading ? <Loading /> : <>{
+                    items.slice(0, 4).map((item) => (
+                        <Item key={item.id} item={item} />
+                    ))
+                }</>
+            }
+
+        </Card>
+    )
+}
