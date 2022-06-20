@@ -8,6 +8,9 @@ import { Loading } from '../Loading/Loading';
 
 export const PreviewItem = () => {
 
+    // Este componente se encarga de funcionar como un wrapper para contener
+    // el resto de componentes usados en este modulo y mostrarlos correctamente
+
     const { getItems } = PreviewItemsBusiness()
     const [params] = useSearchParams()
     const { state: { items, loading } } = usePreviewItem()

@@ -3,6 +3,9 @@ import { usePreviewItem } from "../context/usePreviewItem";
 import { Items } from "../types/reducerTypes";
 import { previewItemsAction } from "./previewItemsAction";
 
+// este archivo contiene la funcion PreviewItemsBusiness el cual nos permitira
+// realizar los dispatch de nuestras acciones creadas ademas de realizar funcion con una mayor logica
+// o complejidad
 export const PreviewItemsBusiness = () => {
   const { setItems, setLoading } = previewItemsAction();
 

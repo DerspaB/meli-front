@@ -4,8 +4,13 @@ import { PreviewItemsBusiness } from '../../../PreviewItem/actions/previewItemsB
 
 export const Detail = () => {
 
-    const { formatPrice } = PreviewItemsBusiness()
+    // se crea el componente visual del detalle el cual mostrara el detalle
+    // del producto seleccionado
 
+
+    const { formatPrice } = PreviewItemsBusiness()
+    //aca obtenemos de nuestro hook el estado que estamos manteniendo por modulo
+    // y asi accedemos al currenItem
     const { state: { currentItem } } = useItemDetail()
 
     return (

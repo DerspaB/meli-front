@@ -3,6 +3,9 @@ import { useItemDetail } from "../context/useItemDetail";
 import { CurrentItem } from "../types/reducerTypes";
 import { itemDetailAction } from "./itemDetailAction";
 
+// este archivo contiene la funcion ItemDetailBusiness el cual nos permitira
+// realizar los dispatch de nuestras acciones creadas ademas de realizar funcion con una mayor logica
+// o complejidad
 export const ItemDetailBusiness = () => {
   const { setCurrentItem, setLoading } = itemDetailAction();
 

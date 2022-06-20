@@ -7,9 +7,14 @@ export interface ItemProps {
   item: Items
 }
 
+
+// este componente muestra los atributos del item el cual es encontrado en la busqueda inical
 export const Item = ({ item }: ItemProps) => {
 
+  // se hace llamado del useNavigate ya que esta funcion nos permite poder
+  // navegar a otra ruta y en este caso añadirle un parametro por url
   const navigate = useNavigate()
+
 
   const handleClick = () => navigate(`../items/${item.id}`)
 

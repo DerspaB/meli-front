@@ -1,6 +1,7 @@
 import { actionTypes } from "../types/actionTypes";
 import { CurrentItem, ItemDetailReducer } from "../types/reducerTypes";
 
+// creamos los estados iniciales que contendran los atributos de nuestro reducer
 const currentItemInitial: CurrentItem = {
   id: "",
   title: "",
@@ -16,6 +17,9 @@ export const itemDetailState: ItemDetailReducer = {
   loading: false,
 };
 
+// creamos nuestro reducer el cual se encargara de mantener la logica de cuando se haga
+// el llamado de una u otra accion y validar que comportamiento es que el tiene que realizar
+// esto se hace mediante un switch sobre nuestros action.type
 export const itemDetailReducer = (
   state: ItemDetailReducer,
   action: actionTypes

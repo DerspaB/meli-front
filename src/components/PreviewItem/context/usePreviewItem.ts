@@ -14,7 +14,7 @@ export const PreviewItemContext = createContext<previewItemContext>({
   dispatch: () => {},
 });
 
-// Se crea un custom hook para validar que nuestro contexto no contenta una instancia indefinida
+// Se crea un custom hook para validar que nuestro contexto no contenga una instancia indefinida
 // y una vez se valide que si contiene una instancia, lo retornamos para su uso posterior
 
 export const usePreviewItem = () => {

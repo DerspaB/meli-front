@@ -1,3 +1,5 @@
+// En este archivo se crean las diferentes interfaces para los estados de nuestro reducer
+
 export interface PreviewItemReducer {
   items: Items[];
   loading: boolean;
